@@ -19,6 +19,13 @@ $main-font: 'Goldman';
     font-size: 24px;
 }
 
+@mixin button-color($color, $darker-color) {
+    color: white;
+    background: $color;
+    border: 2px solid $darker-color;
+    box-shadow: 0px 4px 0px $darker-color;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -66,22 +73,25 @@ body {
         width: 30rem;
     }
     &__input {
-        width: 67%;
+        width: 20rem;
         @include text-style;
         border: 3px solid $primary-color;
     }
     &__button {
+        position: relative;
+        bottom: 3px;
         width: 9rem;
         @include text-style;
-        color: white;
         cursor: pointer;
         &--check {
-            background: $first-btn-color;
-            border: 2px solid $first-btn-darker;
+            @include button-color($first-btn-color, $first-btn-darker);
         }
         &--replay {
-            background: $second-btn-color;
-            border: 2px solid $second-btn-darker;
+            @include button-color($second-btn-color, $second-btn-darker);
+        }
+        &:active {
+            transform: translateY(4px);
+            box-shadow: none;
         }
     }
     &__clue {
@@ -105,5 +115,12 @@ body {
         &--hidden {
             display: none;
         }
+    }
+    &__credit {
+        position: relative;
+        left: 3.5rem; bottom: 0.5rem;
+        font-family: $main-font;
+        font-size: 12px;
+        color: black;
     }
 }

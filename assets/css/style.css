@@ -48,25 +48,34 @@ body {
   width: 30rem;
 }
 .box__input {
-  width: 67%;
+  width: 20rem;
   font-family: "Goldman";
   font-size: 24px;
   border: 3px solid #0091AD;
 }
 .box__button {
+  position: relative;
+  bottom: 3px;
   width: 9rem;
   font-family: "Goldman";
   font-size: 24px;
-  color: white;
   cursor: pointer;
 }
 .box__button--check {
+  color: white;
   background: #7DC95E;
   border: 2px solid #4c9130;
+  box-shadow: 0px 4px 0px #4c9130;
 }
 .box__button--replay {
+  color: white;
   background: #772D8B;
   border: 2px solid #35143e;
+  box-shadow: 0px 4px 0px #35143e;
+}
+.box__button:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 .box__clue {
   display: flex;
@@ -91,4 +100,12 @@ body {
 }
 .box__score--hidden {
   display: none;
+}
+.box__credit {
+  position: relative;
+  left: 3.5rem;
+  bottom: 0.5rem;
+  font-family: "Goldman";
+  font-size: 12px;
+  color: black;
 }
