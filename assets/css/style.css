@@ -43,6 +43,9 @@ body {
   font-family: "Goldman";
   font-size: 24px;
   text-align: left;
+  -moz-appearance: textfield;
+       appearance: textfield;
+  -webkit-appearance: none;
 }
 .box__container {
   width: 30rem;
@@ -51,7 +54,13 @@ body {
   width: 20rem;
   font-family: "Goldman";
   font-size: 24px;
+  text-align: center;
   border: 3px solid #0091AD;
+}
+.box__input--error {
+  color: white;
+  background: #FC5130;
+  border-color: #c32203;
 }
 .box__button {
   position: relative;
@@ -77,29 +86,30 @@ body {
   transform: translateY(4px);
   box-shadow: none;
 }
-.box__clue {
+.box__text {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15rem;
-  height: 5rem;
-  font-family: "Goldman";
-  font-size: 32px;
-  color: #FC5130;
-  border: 2px dashed #FC5130;
-  margin: 2.5rem 0;
-}
-.box__clue--won {
-  color: #7DC95E;
-  border: 2px dashed #7DC95E;
-}
-.box__score {
+  text-align: center;
+  width: 20rem;
+  height: 8rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
   font-family: "Goldman";
   font-size: 24px;
-  margin-bottom: 2.5rem;
+  color: #772D8B;
+  border: 2px dashed #772D8B;
+  margin: 2.5rem 0;
 }
-.box__score--hidden {
-  display: none;
+.box__text--clue {
+  font-size: 36px;
+  color: #FC5130;
+  border: 2px dashed #FC5130;
+}
+.box__text--won {
+  font-size: 28px;
+  color: #7DC95E;
+  border: 2px dashed #7DC95E;
 }
 .box__credit {
   position: relative;

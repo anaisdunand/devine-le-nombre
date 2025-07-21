@@ -1,0 +1,17 @@
+@mixin text-style {
+    font-family: $main-font;
+    font-size: 24px;
+}
+
+@mixin button-color($color, $darker-color) {
+    color: white;
+    background: $color;
+    border: 2px solid $darker-color;
+    box-shadow: 0px 4px 0px $darker-color;
+}
+
+@mixin clue-style($size, $color) {
+    font-size: $size;
+    color: $color;
+    border: 2px dashed $color;
+}

@@ -1,0 +1,14 @@
+$primary-color: #0091AD;
+$secondary-color: #FC5130;
+$secondary-color-darker: color.adjust($secondary-color, $lightness: -20%);
+
+$main-bg-color: #F7F5FB;
+$second-bg-color: #ADF5FF;
+
+$first-btn-color: #7DC95E;
+$first-btn-darker: color.adjust($first-btn-color, $lightness: -20%);
+$second-btn-color: #772D8B;
+$second-btn-darker: color.adjust($second-btn-color, $lightness: -20%);
+
+$title-font: 'Press Start 2P';
+$main-font: 'Goldman';
