@@ -15,8 +15,12 @@ function resetGame() {
 }
 
 input.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        checkButton.click()
+    if (allowedKeys.includes(event.key)) {
+        if (event.key === "Enter") {
+            checkButton.click()
+        }
+    } else if (!isDigit.test(event.key)) {
+        event.preventDefault()
     }
 })
 
