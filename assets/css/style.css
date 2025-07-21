@@ -3,7 +3,6 @@ body {
   justify-content: center;
   background: #F7F5FB;
   margin: 0;
-  padding-top: 5rem;
 }
 
 .box {
@@ -12,6 +11,13 @@ body {
   border: 10px solid white;
   border-radius: 50px;
   box-shadow: 0px 0px 24px rgba(3, 7, 18, 0.2);
+  margin-top: 5rem;
+}
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    margin-top: 2rem;
+  }
 }
 .box__heading {
   display: flex;
@@ -22,6 +28,12 @@ body {
   padding: 1rem;
   gap: 2rem;
 }
+@media (max-width: 768px) {
+  .box__heading {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .box__image {
   width: 4rem;
   height: 4rem;
@@ -30,6 +42,15 @@ body {
   font-family: "Press Start 2P";
   font-size: 32px;
   color: white;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
+  .box__title {
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+    margin: 1rem 0 0;
+  }
 }
 .box__content {
   display: flex;
@@ -43,12 +64,24 @@ body {
   font-family: "Goldman";
   font-size: 24px;
   text-align: left;
-  -moz-appearance: textfield;
-       appearance: textfield;
-  -webkit-appearance: none;
+}
+@media (max-width: 768px) {
+  .box__label {
+    width: 90%;
+    text-align: center;
+  }
 }
 .box__container {
   width: 30rem;
+}
+@media (max-width: 768px) {
+  .box__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 90%;
+  }
 }
 .box__input {
   width: 20rem;
@@ -57,10 +90,15 @@ body {
   text-align: center;
   border: 3px solid #0091AD;
 }
+@media (max-width: 768px) {
+  .box__input {
+    width: 100%;
+  }
+}
 .box__input--error {
   color: white;
   background: #FC5130;
-  border-color: #c32203;
+  border-color: rgb(195.1714285714, 33.9428571429, 2.8285714286);
 }
 .box__button {
   position: relative;
@@ -73,14 +111,14 @@ body {
 .box__button--check {
   color: white;
   background: #7DC95E;
-  border: 2px solid #4c9130;
-  box-shadow: 0px 4px 0px #4c9130;
+  border: 2px solid rgb(76.3023255814, 144.5255813953, 48.4744186047);
+  box-shadow: 0px 4px 0px rgb(76.3023255814, 144.5255813953, 48.4744186047);
 }
 .box__button--replay {
   color: white;
   background: #772D8B;
-  border: 2px solid #35143e;
-  box-shadow: 0px 4px 0px #35143e;
+  border: 2px solid rgb(53.0326086957, 20.0543478261, 61.9456521739);
+  box-shadow: 0px 4px 0px rgb(53.0326086957, 20.0543478261, 61.9456521739);
 }
 .box__button:active {
   transform: translateY(4px);
@@ -101,6 +139,11 @@ body {
   border: 2px dashed #772D8B;
   margin: 2.5rem 0;
 }
+@media (max-width: 768px) {
+  .box__text {
+    width: 100%;
+  }
+}
 .box__text--clue {
   font-size: 36px;
   color: #FC5130;
@@ -118,4 +161,13 @@ body {
   font-family: "Goldman";
   font-size: 12px;
   color: black;
+}
+@media (max-width: 768px) {
+  .box__credit {
+    left: 0;
+    bottom: 0;
+    top: 3.5rem;
+    display: flex;
+    justify-content: center;
+  }
 }
