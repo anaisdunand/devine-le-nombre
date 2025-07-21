@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/scripts/config.js" defer></script>
+        <script src="assets/scripts/script.js" defer></script>
+        <script src="assets/scripts/main.js" defer></script>
     </head>
 
     <body>
@@ -18,13 +21,12 @@
                 <h1 class="box__title">Devine le Nombre !</h1>
             </div>
             <div class="box__content">
-                <label class="box__label" for="number">Entre un nombre entre 1 et 100 :</label>
+                <label class="box__label" for="number">Entre un nombre entre 1 et 1000 :</label>
                 <div class="box__container">
-                    <input class="box__input" type="number" id="number" name="number" placeholder="Ex: 42">
+                    <input class="box__input" type="number" id="number" name="number" placeholder="Ex: 420">
                     <button class="box__button box__button--check" id="check">Vérifier</button>
                 </div>
-                <span class="box__clue">C'est plus !</span>
-                <span class="box__score box__score--hidden">Tu as trouvé en 25 tentatives !</span>
+                <span class="box__text">Devine à quel nombre je pense &#x1F609;</span>
                 <button class="box__button box__button--replay" id="replay">Rejouer</button>
             </div>
             <a class="box__credit" href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icon created by bearicons - Flaticon</a>
