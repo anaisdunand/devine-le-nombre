@@ -5,11 +5,11 @@ function changeHistory(userNumber) {
     let arrow = ""
 
     if (userNumber < secretNumber) {
-        arrow = "🠅"
+        arrow = "&#129045;"
     } else if (userNumber > secretNumber) {
-        arrow = "🠇"
+        arrow = "&#129047;"
     } else {
-        arrow = "✔"
+        arrow = "&#10004;"
     }
 
     history.classList.remove("history--hidden")
