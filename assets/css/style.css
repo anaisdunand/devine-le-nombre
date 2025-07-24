@@ -1,16 +1,10 @@
-body {
-  display: flex;
-  justify-content: center;
-  background: #F7F5FB;
-  margin: 0;
-}
-
 .box {
   width: 60%;
   background: #ADF5FF;
   border: 10px solid white;
   border-radius: 50px;
   box-shadow: 0px 0px 24px rgba(3, 7, 18, 0.2);
+  overflow: hidden;
   margin-top: 5rem;
 }
 @media (max-width: 768px) {
@@ -19,17 +13,16 @@ body {
     margin-top: 2rem;
   }
 }
-.box__heading {
+.box__header {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #0091AD;
-  border-radius: 40px 40px 0 0;
   padding: 1rem;
   gap: 2rem;
 }
 @media (max-width: 768px) {
-  .box__heading {
+  .box__header {
     flex-direction: column;
     gap: 0;
   }
@@ -58,9 +51,11 @@ body {
   align-items: center;
   padding: 2rem;
 }
-.box__label {
+.box__form {
   width: 30rem;
-  padding-bottom: 1rem;
+}
+.box__label {
+  width: 100%;
   font-family: "Goldman";
   font-size: 24px;
   text-align: left;
@@ -72,7 +67,8 @@ body {
   }
 }
 .box__container {
-  width: 30rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .box__container {
@@ -120,7 +116,7 @@ body {
   border: 2px solid rgb(53.0326086957, 20.0543478261, 61.9456521739);
   box-shadow: 0px 4px 0px rgb(53.0326086957, 20.0543478261, 61.9456521739);
 }
-.box__button:active {
+.box__button:active, .box__button--active {
   transform: translateY(4px);
   box-shadow: none;
 }
@@ -170,4 +166,61 @@ body {
     display: flex;
     justify-content: center;
   }
+}
+
+.history {
+  position: absolute;
+  top: 10rem;
+  left: 75rem;
+  width: 20.25rem;
+  max-height: 20.75rem;
+  background: rgb(202.8940217391, 143.5733695652, 218.9266304348);
+  border: 10px solid white;
+  border-radius: 50px;
+  box-shadow: 0px 0px 24px rgba(3, 7, 18, 0.2);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 250ms ease-in-out;
+}
+.history--hidden {
+  transform: scale(0);
+}
+.history__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #772D8B;
+  width: 100%;
+  font-family: "Press Start 2P";
+  font-size: 24px;
+  color: white;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+.history__list {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.history__item {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.25rem 0;
+  box-sizing: border-box;
+  font-family: "Goldman";
+  font-size: 24px;
+  text-align: center;
+  border-top: 2px solid white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F7F5FB;
+  margin: 0;
 }

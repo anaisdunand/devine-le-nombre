@@ -1,5 +1,28 @@
+@use 'variables' as vars;
+
+@mixin block-style($bg-color) {
+    background: $bg-color;
+    border: 10px solid white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 24px rgba(3, 7, 18, 0.20);
+    overflow: hidden;
+}
+
+@mixin header-style($bg-color) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-color;
+}
+
+@mixin title-style($size) {
+    font-family: vars.$title-font;
+    font-size: $size;
+    color: white;
+}
+
 @mixin text-style {
-    font-family: $main-font;
+    font-family: vars.$main-font;
     font-size: 24px;
 }
 

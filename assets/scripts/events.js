@@ -1,30 +1,20 @@
-function startGame() {
-    secretNumber = Math.floor(Math.random() * 1000) + 1
-    attemptsNumber = 0
-}
-
-function resetGame() {
-    startGame()
-
-    input.value = ""
-    input.placeholder = "Ex: 420"
-    input.classList.remove("box__input--error")
-    textZone.innerHTML = "Devine à quel nombre je pense &#x1F609;"
-    textZone.classList.remove("box__text--won", "box__text--clue")
-    checkButton.disabled = false
-}
-
 input.addEventListener("keydown", (event) => {
     if (allowedKeys.includes(event.key)) {
         if (event.key === "Enter") {
-            checkButton.click()
+            checkButton.classList.add("box__button--active")
+            setTimeout(() => {
+                checkButton.classList.remove("box__button--active")
+            }, 150)
+
+            checkButton.submit()
         }
     } else if (!isDigit.test(event.key)) {
         event.preventDefault()
     }
 })
 
-checkButton.addEventListener("click", () => {
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
     const userNumber = Number(input.value)
 
     if (userNumber < 1 || userNumber > 1000 || userNumber === "") {
@@ -33,6 +23,8 @@ checkButton.addEventListener("click", () => {
     } else {
         input.classList.remove("box__input--error")
         attemptsNumber++
+
+        changeHistory(userNumber)
 
         if (userNumber === secretNumber) {
             textZone.classList.add("box__text--won")
@@ -47,7 +39,6 @@ checkButton.addEventListener("click", () => {
         }
     }
 
-    input.placeholder = `${input.value}`
     input.value = ""
 })
 

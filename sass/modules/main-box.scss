@@ -1,0 +1,127 @@
+@use '../settings/variables' as vars;
+@use '../settings/mixins' as mixins;
+
+.box {
+    width: 60%;
+    @include mixins.block-style(vars.$second-bg-color);
+    margin-top: 5rem;
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    &__header {
+        @include mixins.header-style(vars.$first-color);
+        padding: 1rem;
+        gap: 2rem;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+    &__image {
+        width: 4rem; height: 4rem;
+    }
+    &__title {
+        @include mixins.title-style(32px);
+        margin: 1rem 0;
+        @media (max-width: 768px) {
+            font-size: 24px;
+            text-align: center;
+            line-height: 32px;
+            margin: 1rem 0 0;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+    &__form {
+        width: 30rem;
+    }
+    &__label {
+        width: 100%;
+        @include mixins.text-style;
+        text-align: left;
+        @media (max-width: 768px) {
+            width: 90%;
+            text-align: center;
+        }
+    }
+    &__container {
+        width: 100%;
+        margin-top: 1rem;
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            width: 90%;
+        }
+    }
+    &__input {
+        width: 20rem;
+        @include mixins.text-style;
+        text-align: center;
+        border: 3px solid vars.$first-color;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        &--error {
+            color: white;
+            background: vars.$fourth-color;
+            border-color: vars.$fourth-color-darker;
+        }
+    }
+    &__button {
+        position: relative;
+        bottom: 3px;
+        width: 9rem;
+        @include mixins.text-style;
+        cursor: pointer;
+        &--check {
+            @include mixins.button-color(vars.$third-color, vars.$third-color-darker);
+        }
+        &--replay {
+            @include mixins.button-color(vars.$second-color, vars.$second-color-darker);
+        }
+        &:active, &--active {
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 20rem; height: 8rem;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        font-family: vars.$main-font;
+        @include mixins.clue-style(24px, vars.$second-color);
+        margin: 2.5rem 0;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        &--clue {
+            @include mixins.clue-style(36px, vars.$fourth-color);
+        }
+        &--won {
+            @include mixins.clue-style(28px, vars.$third-color);
+        }
+    }
+    &__credit {
+        position: relative;
+        left: 3.5rem; bottom: 0.5rem;
+        font-family: vars.$main-font;
+        font-size: 12px;
+        color: black;
+        @media (max-width: 768px) {
+            left: 0; bottom: 0; top: 3.5rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

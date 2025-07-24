@@ -1,14 +1,17 @@
-$primary-color: #0091AD;
-$secondary-color: #FC5130;
-$secondary-color-darker: color.adjust($secondary-color, $lightness: -20%);
+@use 'sass:color';
+
+$first-color: #0091AD;
+$second-color: #772D8B;
+$third-color: #7DC95E;
+$fourth-color: #FC5130;
+
+$second-color-darker: color.adjust($second-color, $lightness: -20%);
+$third-color-darker: color.adjust($third-color, $lightness: -20%);
+$fourth-color-darker: color.adjust($fourth-color, $lightness: -20%);
 
 $main-bg-color: #F7F5FB;
 $second-bg-color: #ADF5FF;
-
-$first-btn-color: #7DC95E;
-$first-btn-darker: color.adjust($first-btn-color, $lightness: -20%);
-$second-btn-color: #772D8B;
-$second-btn-darker: color.adjust($second-btn-color, $lightness: -20%);
+$third-bg-color: color.adjust($second-color, $lightness: 35%);
 
 $title-font: 'Press Start 2P';
 $main-font: 'Goldman';
