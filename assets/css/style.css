@@ -1,16 +1,15 @@
 .box {
   width: 60%;
+  max-width: 63.5rem;
   background: #ADF5FF;
   border: 10px solid white;
   border-radius: 50px;
   box-shadow: 0px 0px 24px rgba(3, 7, 18, 0.2);
   overflow: hidden;
-  margin-top: 5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .box {
     width: 90%;
-    margin-top: 2rem;
   }
 }
 .box__header {
@@ -37,7 +36,7 @@
   color: white;
   margin: 1rem 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .box__title {
     font-size: 24px;
     text-align: center;
@@ -54,6 +53,11 @@
 .box__form {
   width: 30rem;
 }
+@media (max-width: 768px) {
+  .box__form {
+    width: 100%;
+  }
+}
 .box__label {
   width: 100%;
   font-family: "Goldman";
@@ -62,7 +66,6 @@
 }
 @media (max-width: 768px) {
   .box__label {
-    width: 90%;
     text-align: center;
   }
 }
@@ -76,7 +79,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    width: 90%;
   }
 }
 .box__input {
@@ -168,11 +170,27 @@
   }
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  background: #F7F5FB;
+  margin: 0;
+  padding-top: 5rem;
+}
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+}
+
 .history {
+  cursor: grab;
   position: absolute;
-  top: 10rem;
-  left: 75rem;
-  width: 20.25rem;
+  right: 4rem;
+  top: 4rem;
+  max-width: 20.25rem;
   max-height: 20.75rem;
   background: rgb(202.8940217391, 143.5733695652, 218.9266304348);
   border: 10px solid white;
@@ -181,6 +199,15 @@
   overflow: hidden;
   box-sizing: border-box;
   transition: transform 250ms ease-in-out;
+}
+@media (max-width: 768px) {
+  .history {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 1.5rem 0;
+    width: 90%;
+  }
 }
 .history--hidden {
   transform: scale(0);
@@ -197,6 +224,11 @@
   padding: 1.5rem 2rem;
   margin: 0;
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .history__title {
+    font-size: 20px;
+  }
 }
 .history__list {
   display: flex;
@@ -215,12 +247,4 @@
   font-size: 24px;
   text-align: center;
   border-top: 2px solid white;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #F7F5FB;
-  margin: 0;
 }

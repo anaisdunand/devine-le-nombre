@@ -3,11 +3,10 @@
 
 .box {
     width: 60%;
+    max-width: 63.5rem;
     @include mixins.block-style(vars.$second-bg-color);
-    margin-top: 5rem;
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         width: 90%;
-        margin-top: 2rem;
     }
     &__header {
         @include mixins.header-style(vars.$first-color);
@@ -24,7 +23,7 @@
     &__title {
         @include mixins.title-style(32px);
         margin: 1rem 0;
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             font-size: 24px;
             text-align: center;
             line-height: 32px;
@@ -39,13 +38,15 @@
     }
     &__form {
         width: 30rem;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
     &__label {
         width: 100%;
         @include mixins.text-style;
         text-align: left;
         @media (max-width: 768px) {
-            width: 90%;
             text-align: center;
         }
     }
@@ -57,7 +58,6 @@
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            width: 90%;
         }
     }
     &__input {

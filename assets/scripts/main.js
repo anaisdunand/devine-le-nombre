@@ -1,1 +1,3 @@
 startGame()
+
+makeDraggable(history)
