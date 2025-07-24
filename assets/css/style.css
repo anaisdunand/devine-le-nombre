@@ -170,27 +170,12 @@
   }
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  background: #F7F5FB;
-  margin: 0;
-  padding-top: 5rem;
-}
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-  }
-}
-
 .history {
   cursor: grab;
   position: absolute;
   right: 4rem;
   top: 4rem;
-  max-width: 20.25rem;
+  width: 20.25rem;
   max-height: 20.75rem;
   background: rgb(202.8940217391, 143.5733695652, 218.9266304348);
   border: 10px solid white;
@@ -207,6 +192,7 @@ body {
     top: 0;
     margin: 1.5rem 0;
     width: 90%;
+    max-width: 20.25rem;
   }
 }
 .history--hidden {
@@ -247,4 +233,19 @@ body {
   font-size: 24px;
   text-align: center;
   border-top: 2px solid white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #F7F5FB;
+  margin: 0;
+  padding-top: 5rem;
+}
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
 }
